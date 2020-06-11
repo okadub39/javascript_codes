@@ -104,3 +104,6 @@ const draw = event => {
     }
 }
 
+const endDraw = event => {
+    mouseDown = false;
+}
