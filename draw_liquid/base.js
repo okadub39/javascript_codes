@@ -84,4 +84,7 @@ const drawCircle = (x,y,r,color) => {
     context.fill;
 }
 
-context
+const startDraw = event => {
+    sx = event.clientX - canvasRect.left;
+
+}
