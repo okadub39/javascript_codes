@@ -86,5 +86,6 @@ const drawCircle = (x,y,r,color) => {
 
 const startDraw = event => {
     sx = event.clientX - canvasRect.left;
-
+    sy = event.ClientY - canvasRect.top;
+    mouseDown = true;
 }
