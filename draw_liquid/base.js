@@ -107,3 +107,10 @@ const draw = event => {
 const endDraw = event => {
     mouseDown = false;
 }
+
+const deleteLines = () => {
+    for (const line of lines) {
+        world.DestroyBody(line.body);
+    }
+    lines = [];
+}
