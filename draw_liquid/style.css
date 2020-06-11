@@ -1,4 +1,7 @@
 main {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
 }
 h1 {
@@ -11,4 +14,12 @@ h1 {
     padding: 10px;
     border:1px solid #cccccc;
     background-color: #eeeeee;
+}
+
+input[type="range"]{
+    width: 600px;
+}
+
+canvas {
+    border: thin solid #000000;
 }
