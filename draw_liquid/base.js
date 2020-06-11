@@ -5,8 +5,8 @@ let lines = new Array();
 let mouseDown = false,sx,sy;
 
 const init = () => {
-    canvas = document.getElementById("world");
-    context = canvas.getContext("2d");
+    canvas     = document.getElementById("world");
+    context    = canvas.getContext("2d");
     canvasRect = canvas.getBoundingClientRect();
 
     const shape = new b2ChainShape();
@@ -16,7 +16,7 @@ const init = () => {
     shape.vertices.push(new b2Vec2(canvas.width/100,0));
 
     const waku = world.CreateBody(new b2BodyDef());
-    waku.CreateFixtureShape(shape,0);
+    waku.CreateFixtureFromShape(shape,0);
 
     const circle = new b2CircleShape();
     circle.radius = 0.5;
@@ -32,15 +32,16 @@ const init = () => {
 }
 
 const initBall = () => {
-    let pos = document.getElementById("pos").nodeValue;
+    let pos = document.getElementById("pos").value;
     if(pos < 0.5) pos = 0.5;
     if(pos > canvas.width/100 - 0.5) pos = canvas.width/100 - 0.5;
+
     ball.SetAwake(false);
-    ball.SetLinerVelocity(new b2Vec2(0,1));
+    ball.SetLinearVelocity(new b2Vec2(0,1));
     ball.SetTransform(new b2Vec2(pos,0),0);
 }
 
-const setPS = (particleType,Color) => {
+const setPS = (particleType,color) => {
     if(particleSystem != null) {
         world.DestroyParticleSystem(particleSystem);
     }
@@ -49,7 +50,7 @@ const setPS = (particleType,Color) => {
     const particleSystemDef = new b2ParticleSystemDef();
     particleSystemDef.radius = 0.02;
     const particleGroupDef = new b2ParticleGroupDef();
-    const circle = new b2CirckeShape();
+    const circle = new b2CircleShape();
     circle.radius = 0.5;
     particleGroupDef.shape = circle;
     particleGroupDef.position = new b2Vec2(pos,1);
@@ -65,7 +66,7 @@ const render = () => {
         drawCircle(buffer[i],buffer[i+1],2,particleColor);
     }
     const position = ball.GetPosition();
-    drawCircle(position.x,position.y,50,"#ff00000");
+    drawCircle(position.x,position.y,50,"#ff0000");
     for (const line of lines) {
         context.lineWidth = 2;
         context.beginPath();
@@ -81,7 +82,7 @@ const drawCircle = (x,y,r,color) => {
     context.fillStyle = color;
     context.beginPath();
     context.arc(x*100,y*100,r,0,Math.PI*2);
-    context.fill;
+    context.fill();
 }
 
 const startDraw = event => {
