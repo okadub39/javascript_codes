@@ -12,23 +12,17 @@
     <body onload="init()">
     <h1>liquid</h1>
     <main>
-        <p>you get 10 coins!</p>
-        change map data:<br />
-        <input type="file" accept=".json" onchange="loadMap(this)"><br />
-        create map data URL<br /><a href="https://codepen.io/okada-web/pen/oNbNWap">map_generator RPG map Perlin noise</a><br />
-        <br />
-        <input type="button" id="start" value="start" onclick="startGame()">
-        <br />
-        <hr>
-        coin:<span id="coin">0</span> time:<span id="time">---</span>
-        <div id="renderArea" onmousedown="pick(event)"></div>
-        [←] turn left
-        [→] turn right
-        [↑] turn up
-        [↓] turn down
-        [x] forward
-        [z] back
-        [mouse click] get coin
+        <input type="button" value="clear" onclick="deleteLines()">
+        <input type="button" value="ball" onclick="initBall()">
+        <input type="button" value="liquid" onclick="setPS(b2_waterParticle,'#0000ff')">
+        <input type="button" value="gumi" onclick="setPS(b2_elasticParticle,'#00cc00')">
+        <input type="button" value="sand" onclick="setPS(b2_pawderParticle,'#cccc99')">
+        <input type="button" value="oil1" onclick="setPS(b2_viscousParticle,'#ffcc33')">
+        <input type="button" value="oil2" onclick="setPS(b2_tensileParticle,'#ff6633')">
+        <hr />
+        <input type="range" id="pos" value="3" min="0" max="6" step="0.1"><br/>
+        <canvas id="world" width="600" height="600" onmousedown="srartDraw(event)" onmousemove="draw(event)" onmouseup="endDraw(event)" onmouseleave="endDraw(event)">
+        </canvas>
     </main>
 	</body>
 </html>
