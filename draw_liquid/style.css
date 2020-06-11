@@ -12,3 +12,11 @@ h1 {
     border:1px solid #cccccc;
     background-color: #eeeeee;
 }
+
+input[type="range"]{
+    width: 600px;
+}
+
+canvas {
+    border: thin solid #000000;
+}
