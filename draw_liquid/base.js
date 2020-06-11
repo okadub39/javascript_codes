@@ -89,3 +89,18 @@ const startDraw = event => {
     sy = event.ClientY - canvasRect.top;
     mouseDown = true;
 }
+
+const draw = event => {
+    const x = event.clientX - canvasRect.left;
+    const y = event.clientY - canvasRect.top;
+    if(mouseDown) {
+        const shape = new b2ChainShape();
+        shape.vertices.push(new b2Vec2(sx/100,sy/100));
+        shape.vertices.push(new b2Vec2(x/100,y/100));
+        const line = world.CreateBody(new b2BodyDef());
+        line.CreateFixtureFromShape(shape,0);
+        lines.push({"body":line,"sx":sx,"sy":sy,"ex":x,"ey":y});
+        [sx,sy] = [x,y];
+    }
+}
+
