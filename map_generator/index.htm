@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            map_generator
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="base.js"></script>
+    </head>
+    <body onload="init()">
+    <h1>map_generator</h1>
+    <main>
+        size:
+        <input type="radio" name="size" id="size_10" onclick="draw()"> 80x60
+        <input type="radio" name="size" id="size_20" onclick="draw()" checked> 40x30
+        <input type="radio" name="size" id="size_40" onclick="draw()"> 20x15
+
+        <input type="button" value="new map" onclick="newMap()">
+        <input type="button" value="save map" onclick="saveMap()">
+        <hr>
+        <input type="color" id="color_0" value="#0033CC" onchange="draw()">
+        <input type="color" id="color_1" value="#0099ff" onchange="draw()">
+        <input type="color" id="color_2" value="#009966" onchange="draw()">
+        <input type="color" id="color_3" value="#339900" onchange="draw()">
+        <input type="color" id="color_4" value="#336600" onchange="draw()">
+        <input type="color" id="color_5" value="#CC9900" onchange="draw()">
+        <input type="color" id="color_6" value="#996600" onchange="draw()">
+        <input type="color" id="color_7" value="#993300" onchange="draw()">
+        <hr>
+        <canvas id="map" width="800" height="600"></canvas>
+    </main>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>matching quiz</title>
+<script src="connect_quiz.js"></script>
+<link rel="stylesheet" type="text/css" href="connect_quiz.css">
+
+</head>
+<body onload="init()">
+<header>
+    <h1>Artist music matching　quiz</h1>
+</header>
+<main>
+    <div id="menu">
+        <input type="button" value="start" onclick="startQuestion()">
+        <input type="button" id="check" value="judge" onclick="checkAnswer()">
+        <input type="button" id="next" value="next" onclick="setQuestion()">
+    </div>
+    <canvas id="sheet" width="800px" height="400px" onmousedown="startDraw(event)" onmouseover="draw(event)" onmouseup="endDraw(event)" onmouseleave="endDraw(event)">
+    </canvas>
+</main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+span {
+    color: #cc0000;
+}
+video {
+    border: thin solid #cccccc;
+}
+#back {
+    display: inline-block;
+    border: thin solid #cccccc;
+}
+.small {
+    width: 320px;
+    height: 180px;
+}
+#main {
+    position: relative;
+}
+#chromekey {
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+input[type="number"]{
+    width: 40px;
+}
+canvas{
+    border: thin solid #cccccc;
+}

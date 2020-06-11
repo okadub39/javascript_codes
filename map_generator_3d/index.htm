@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            Treasure hunt
+        </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+        <script src="base.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init()">
+    <h1>Treasure hunt</h1>
+    <main>
+        <p>you get 10 coins!</p>
+        change map data:<br />
+        <input type="file" accept=".json" onchange="loadMap(this)"><br />
+        create map data URL<br /><a href="https://codepen.io/okada-web/pen/oNbNWap">map_generator RPG map Perlin noise</a><br />
+        <br />
+        <input type="button" id="start" value="start" onclick="startGame()">
+        <br />
+        <hr>
+        coin:<span id="coin">0</span> time:<span id="time">---</span>
+        <div id="renderArea" onmousedown="pick(event)"></div>
+        [←] turn left
+        [→] turn right
+        [↑] turn up
+        [↓] turn down
+        [x] forward
+        [z] back
+        [mouse click] get coin
+    </main>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+#message {
+    color: #cc0000;
+}
+#road {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(180deg,#734e30 80px,#999999 80px,#999999 320px, #666666 320px,#666666 350px,#734e30 350px);
+    overflow: hidden;
+}
+#road div {
+    font-size: 40px;
+    position: absolute;
+}
+#life {
+    font-size: 20px !important;
+}
+#player {
+    left: 300px;
+}
+#car0 {
+    top:100px;
+    animation: move_car 5s linear -2s infinite normal;
+}
+#car1 {
+    top:150px;
+    animation: move_car 2s linear 0s infinite normal;
+}
+#car2 {
+    top:200px;
+    transform: scale(-1,1);
+    animation: move_car 3s linear 0s infinite reverse;
+}
+#car3 {
+    top:250px;
+    transform: scale(-1,1);
+    animation: move_car 4s linear 0s infinite reverse;
+}
+#car4 {
+    top:300px;
+    white-space: nowrap;
+    animation: move_train 5s ease-in-out -3s infinite alternate;
+}
+#goal {
+    top:370px;
+    white-space: wrap;
+}
+@keyframes move_car {
+    0% {left: 600px;}
+    100% {left: -50px;}
+}
+@keyframes move_train {
+    0% {left: 550px;}
+    100% {left: -150px;}
+}
+
+
+
+

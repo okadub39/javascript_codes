@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>infection</title>
+<script src="infection.js"></script>
+<link rel="stylesheet" type="text/css" href="infection.css">
+
+</head>
+<body onload="init()">
+<main>
+<header>
+    <h1>COVID-19 SIMULATION</h1>
+</header>
+<p>
+If people move, how do they get infected?
+</p>
+<div class="person">
+    Person Count：<span id="value">1</span>
+    <input type="range" id="num" value="1" min="1" max="100" value="100">
+    <input type="button" value="start" onclick="startSimulation()">
+</div>
+<canvas id="graph" width="600" height="100"></canvas><br>
+<canvas id="city" width="600" height="600"></canvas>
+</main>
+</body>
+<script>
+    var elem = document.getElementById('num');
+    var human = document.getElementById('value');
+    var rangeValue = function (elem, human) {
+    return function(evt){
+        human.innerHTML = elem.value;
+    }
+    }
+    elem.addEventListener('input', rangeValue(elem, human));
+</script>
+</html>

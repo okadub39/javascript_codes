@@ -1,0 +1,41 @@
+body {
+    color: #ffffff;
+    background-color:#000000;
+}
+#title {
+    color: #00ffff;
+}
+#game {
+    overflow-y: scroll;
+}
+.select {
+    color: #00ff00;
+}
+li:hover {
+    color: #ff0000;
+    cursor: pointer;
+}
+.red {
+    color: #ff0000;
+}
+main {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.left {
+    width: 80%;
+    margin: 0 auto;
+}
+.right {
+    width: 80%;
+    margin: 30px auto;
+}
+.memo {
+    text-align: center;
+    line-height: 140%;
+}
+.memo p{
+    margin: 0;
+    padding: 0;
+}

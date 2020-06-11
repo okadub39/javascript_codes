@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            Self_introduction_talk_scenario
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="base.js"></script>
+    </head>
+    <body onload="init()">
+        <main>
+            <h1>Self_introduction<br />talk scenario</h1>
+            <div class="memo">
+                <p>
+                    Please use it on portfolio sites.
+                </p>
+                <p>
+                    Please adjust each design.
+                </p>
+                <p>
+                    Js read texts programming.
+                </p>
+            </div>
+            <div class="left">
+                <div class="explanation">
+                    <p>
+                        Self_introduction_talk<br />
+					</p>
+					<input type="button" id="start" value="start" onclick="initScenario()">
+                </div>
+            </div>
+            <div class="right">
+				<div id="title">------------   scenario   ------------</div>
+                <div id="game"></div>
+                <p>Change File</p>
+				<input type="file" accept=".json" onchange="loadScenario(this)">
+            </div>
+        </main>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+#sheet {
+    width:800px;
+    height: 400px;
+    border:1px solid "#000";
+}
+main {
+    text-align: center;
+}
+header{
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    width: auto;
+    margin: 0 auto;
+}
+#menu input{
+    font-size: 41px !important;
+    margin: 30px auto;
+}

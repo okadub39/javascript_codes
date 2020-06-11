@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            JS Cameltry GAME
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="base.js"></script>
+    </head>
+    <body onload="init()">
+        <h1>JS Cameltry GAME</h1>
+        <main>
+            <div class="left">
+                <div class="explanation">
+                    <p>
+                        Guide the ball to the goal at the back of the road.Use the left and right cursor keys.
+                    </p>
+                    <p>[←]：clockwise</p>
+                    <p>[→]：Counterclockwise</p>
+                </div>
+                <input type="button" value="start" onclick="startGame()">
+                <div id = "time">TIME:0.0</div>
+            </div>
+            <div class="left">
+                <canvas id= "map" width="2000" height="1000"></canvas>
+                <canvas id= "play" width="500" height="500"></canvas>
+            </div>
+        </main>
+    </body>
+</html>

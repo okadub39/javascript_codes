@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            3D EARTH
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="earth.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    </head>
+    <body onload="init()">
+        <h1>3D EARTH</h1>
+        <main>
+            <div id="left">
+                <p>surface image</p>
+                <input type="file" id="map" accept="image/png,image/jpeg" onchange="loadTexture(this)">
+                <p>terrain image</p>
+                <input type="file" id="bump" accept="image/png,image/jpeg" onchange="loadBumpMap(this)">
+                <p>Unevenness</p>
+                <input type="range" id="scale" value="2" min="0" max="20">
+                <span id="textScale">[2]</span>
+                <p>Surface rotation speed</p>
+                <input type="range" id="speed" value="1" min="0" max="10">
+                <span id="textSpeed">[1]</span>
+                <p>Camera angle</p>
+                <input type="range" id="angle" value="0" min="-90" max="90">
+                <span id="textAngle">[0]</span>
+                <p>light source</p>
+                <input type="color" id="lightColor" value="#ffffff"><br />
+                <input type="range" id="lightAngle" value="0" min="-180" max="180">
+                <span id="textLAngle">[0]</span>
+                <br />
+                <input type="checkbox" id="ambientLight" checked>Ambient light
+                <div id="texambitSpeed" style="display: none;"></div>
+                <br />
+                <input type="button" value="reset" onclick="reset()">
+            </div>
+            <div id="left">
+                <div id="renderArea" width="600px" height="600px"></div>
+            </div>
+        </main>
+    </body>
+</html>

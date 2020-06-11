@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            chromakay
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- <script src="base.js"></script> -->
+    </head>
+    <body onload="init()">
+        <h1>chromakay</h1>
+        <main>
+            <div id="left">
+                <p>connect</p>
+                <input type="button" id="connect" value="connect_to_camera" onclick="connect()">
+                <p>terrain image</p>
+                <input type="button" id="disconnect" value="disconnect_to_camera" onclick="disconnect()">
+                <p>Camera</p>
+                <input type="file" accept="image/*,video/mp4,video/webm,video/ogg" onchange="loadBackData(this)">
+                <span id="message"></span>
+                <hr />
+                <video id="camera" width="320" height="180" autoplay></video>
+                <div id="back" class="small"></div>
+                <hr />
+                <p>Transparent color</p>
+                <input type="color" id="color" value="#008000">
+                <p>Color difference</p>
+                <input type="number" id="distance" value="100" step="10">
+                <p>REC</p>
+                <input type="button" id="rec" value="rec" onclick="record()">
+                <p>STOP</p>
+                <input type="button" id="stop" value="stop" onclick="stopRecord()">
+                <span id="messageRec"></span>
+            </div>
+            <div id="left">
+                <div id="main">
+                    <canvas id="temp" width="640" height="360"></canvas>
+                    <canvas id="chromekey" width="640" height="360"></canvas>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            画像方向・位置情報検出
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="base.js"></script>
+    </head>
+    <body onload="init()">
+    <h1>画像方向・位置情報検出</h1>
+    <main>
+        <input type="file" accept="image/*" onchange="loadImage(this)">
+        <input type="checkbox" id="rotate" onclick="drawImage()" checked>
+        画像に合わせる：<span id="orientation">--</span>
+        緯度<span id="lat">--</span>
+        軽度<span id="lng">--</span>
+        <hr>
+        <canvas id="image" width="600" height="600"></canvas>
+        <iframe id="googleMap" class="border" width="300" height="300"></iframe>
+    </main>
+	</body>
+</html>

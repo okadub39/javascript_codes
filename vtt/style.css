@@ -1,0 +1,35 @@
+main {
+    width: 60%;
+    min-width: 800px;
+    margin: 0 auto;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+}
+#videoArea {
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+    border:1px solid #cccccc;
+    background-color: #eeeeee;
+}
+video {
+    width: 640px;
+    height: 360px;
+}
+input[type = "text"] {
+    width: 400px;
+}
+#vttArea {
+    overflow: hidden;
+}
+button {
+    margin-right: 5px;
+}
+#list div {
+    margin: 5px;
+}
+#list span {
+    font-size: small;
+}

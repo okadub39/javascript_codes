@@ -1,0 +1,29 @@
+#map{
+    display: none;
+}
+#play {
+    border: thin solid gray;
+}
+h1 {
+    text-align: center;
+}
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.explanation {
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+#play {
+    background-color: black;
+}
+.left {
+    width: 50%;
+}
+.right {
+    width: 50%;
+}

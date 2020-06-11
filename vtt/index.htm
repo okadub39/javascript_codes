@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            add subtitles
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="base.js"></script>
+    </head>
+    <body onload="init()">
+    <h1>subtitles editor</h1>
+    <main>
+        <p>movie file</p>
+        <input type="file" accept="video/mp4,video/webm,video/ogg" onchange="loadVideo(this)">
+        <hr>
+        <div id="videoArea">
+            <video id="video" controls></video><br>
+            play position<span id="time">00:00:00.000</span>(<span id="secTime">0</span>spam</span>s)
+            <br />
+            start position<span id="time_0">--:--:--.---</span>(<span id="secTime_0">--</span>s)
+            <input type="button" value="set start position" onclick="setTime(0)"><br>
+            end position<span id="time_1">--:--:--.---</span>(<span id="secTime_1">--</span>s)
+            <input type="button" value="setb end position" onclick="setTime(1)"><br>
+            subtitles<input type="text" id="text">
+            <input type="button" id="add" value="add VTT" onclick="addVTT()">
+        </div>
+        <div id="vttArea">
+            <input type="button" value="make VTT file" onclick="saveVTT()">
+            <div id="list"></div>
+        </div>
+    </main>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+main {
+    text-align: center;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+}
+#videoArea {
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+    border:1px solid #cccccc;
+    background-color: #eeeeee;
+}
