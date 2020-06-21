@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            stained glass
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="base.js"></script>
+    </head>
+    <body onload="init()">
+        <h1>stained glass</h1>
+        <main>
+            <div class="left">
+                <input type="file" accept="image/*" onchange="loadImage(this.files)"><br />
+                SIZE：<br />
+                <input type="radio" id="l" name="size">Learge<br />
+                <input type="radio" id="m" name="size" checked>Middle<br />
+                <input type="radio" id="s" name="size">Small<br />
+                <input type="checkbox" id="line" cehcked>Line<br />
+                <hr />
+                <input type="button" value="Do" onclick="startStained()">
+                <input type="button" value="Undo" onclick="drawImgae()">
+                <input type="button" value="SAVE" onclick="saveImage()">
+                <progress id="progress" max="400" value="0"></progress>
+            </div>
+            <div class="right">
+                <canvas id="glass" width="400" height="400"></canvas>
+            </div>
+        </main>
+    </body>
+</html>

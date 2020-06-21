@@ -1,0 +1,26 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+main {
+    display: flex;
+    width: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.left{
+    width: 50%;
+    text-align: left;
+}
+.right{
+    width: 50%;
+    text-align: center;
+}
+canvas{
+    border: thin solid #cccccc;
+}
+progress {
+    display: none;
+    width: 800px;
+}
