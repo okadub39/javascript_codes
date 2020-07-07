@@ -1,0 +1,26 @@
+#today {
+    color: #3366CC;
+}
+#today_steps {
+    font-size: 60px;
+    font-weight: bold;
+    color: #3366CC;
+}
+.row div {
+    display: inline-block;
+}
+.date {
+    width: 150px;
+}
+.step {
+    width: 60px;
+    margin-right: 10px;
+    text-align: right;
+}
+.bar {
+    height: 10px;
+    background-color: #339999;
+}
+.today_bar {
+    background-color: #CC3333 !important;
+}
